@@ -12,11 +12,13 @@ console.log(firstName, lastName);
 
 //4
 let profileFirstName = 'Brendan';
-    profileLastName = 'Eich ';
-    profileAge = '58';
-    profileProfession = 'technologist and creator of the JavaScript programming language.';
-    profileCityBorn = 'Pittsburgh, Pennsylvania, U.S.';
-    
+let profileLastName = 'Eich ';
+let profileAge = '58';
+let profileProfession = 'technologist and creator of the JavaScript programming language.';
+let profileCityBorn = 'Pittsburgh, Pennsylvania, U.S.';
+
+//to use let one time, kommas in the end, semicolon in the end of a group (so after Brendan, and after US ;)
+
 console.log(profileFirstName, profileLastName, profileAge, profileCityBorn, profileProfession);
 
 //5
