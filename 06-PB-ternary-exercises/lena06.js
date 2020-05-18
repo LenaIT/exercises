@@ -18,5 +18,5 @@ let isStudent = true;
 (isStudent === true) ? console.log("Ticket costs €5,00"): console.log("Ticket costs €12,00");
 
 //5
-let okMarie = false;
-(okMarie) ? console.log("Let them eat cake"): console.log("Oh, bother");
+let okMarie = "cake";
+(okMarie==="cake") ? console.log("Let them eat cake"): console.log("Oh, bother");
