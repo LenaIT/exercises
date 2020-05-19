@@ -28,7 +28,8 @@ console.log(`${fruit[0]}${fruit}${fruit[0]}`);
 
 //7
 let newString = "Scritch";
-console.log(`${newString.substring(4, 7)}${newString}${newString.substring(4, 7)}`);
+//console.log(`${newString.substring(4, 7)}${newString}${newString.substring(4, 7)}`);
+console.log(`${newString.substring(newString.length-3)}${newString}${newString.substring(newString.length-3)}`);
 
 //8
 let dance = "BoogieWoogie";
@@ -44,5 +45,5 @@ console.log(`My name is ${firstName}. I live in ${city} and I am ${profession}.`
 
 //10
 let animal = "the quick brown fox";
-console.log(animal.length);
+//console.log(animal.length);
 console.log(animal[0].toUpperCase() + animal.substring(1));
