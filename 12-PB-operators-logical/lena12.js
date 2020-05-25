@@ -1,7 +1,7 @@
 'use strict;'
 
 //0
-let a = false;
+let a = true;
 let b = false;
 
 //1
