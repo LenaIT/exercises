@@ -1,5 +1,7 @@
+'use strict;'
+
 //0
-let a = true;
+let a = false;
 let b = false;
 
 //1
@@ -15,7 +17,7 @@ console.log(
 
 //c)
 console.log(
-    !(a && b) ? "one is true or one is false" : "both are true or both are false"
+    !(a && b) ? "both are false or at least one" : "both true"
 );
 
 //2
