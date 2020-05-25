@@ -33,7 +33,7 @@ console.log(
 
 //b x is NOT equal to y
 console.log(
-    (x != y) ? "x is not equal to y" : "x is equal to y"
+    (x !== y) ? "x is not equal to y" : "x is equal to y"
 );
 
 //c z is less than y OR z is greater than x
@@ -43,7 +43,7 @@ console.log(
 
 //d x is equal to z OR x is NOT equal to y
 console.log(
-    ((x === z) || (x != y)) ? "at least one of conditions is true" : "both conditions are false"
+    ((x === z) || (x !== y)) ? "at least one of conditions is true" : "both conditions are false"
 );
 
 //e x is greater than or equal to 10 AND y is less than or equal to 10
