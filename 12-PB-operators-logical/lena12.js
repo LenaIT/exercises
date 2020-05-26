@@ -55,3 +55,4 @@ console.log(
 console.log(
     (((x * z) < 100) || ((x * y) > 100)) ? "at least one of conditions is true" : "both conditions are false"
 );
+
