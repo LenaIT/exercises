@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 //1
 console.log(3 == "3");
@@ -11,12 +11,12 @@ console.log(3 === "3");
 // = is not for compare (will be SyntaxError: Invalid left-hand side in assignment ), it will be used for assign a value
 
 //2
-let a = true;
-console.log(!a ? true : false); //false
+let myVariable = true;
+console.log(!myVariable ? true : false); //false
 
 //3
 let firstName, givenName;
 firstName = "Stacey";
 let name = givenName || firstName || "John";
-console.log(name);
-//Stacey. first will be checked givenName-falsy(it is undefined, we did not assign any value to this variable), after will be checked firsName -truthy
+console.log(name); //Stacey
+//First will be checked givenName-falsy(it is undefined, we did not assign any value to this variable), after will be checked firsName -truthy
