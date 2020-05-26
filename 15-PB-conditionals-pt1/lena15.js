@@ -1,8 +1,8 @@
 'use strict';
 
 //1 
-let intOne = 7;
-let intTwo = 100;
+let intOne = 127;
+let intTwo = 68;
 
 if (((intOne >= 50) && (intOne <= 99)) || ((intTwo >= 50) && (intTwo <= 99))) {
     console.log(`true, one or both variables are in the range 50 to 99`);
@@ -10,22 +10,10 @@ if (((intOne >= 50) && (intOne <= 99)) || ((intTwo >= 50) && (intTwo <= 99))) {
     console.log(false);
 }
 
-//if (50<= intOne <=99)
 //2
-let intThree = 55;
+let intThree = 155;
 
-if ((intOne >= 50) && (intOne <= 99)) {
-    console.log(`true, one or more variables are in the range 50 to 99`);
-} else if ((intTwo >= 50) && (intTwo <= 100)) {
-    console.log(`true, one or more variables are in the range 50 to 99`);
-} else if ((intThree >= 50) && (intThree <= 99)) {
-    console.log(`true, one or more variables are in the range 50 to 99`);
-} else {
-    console.log(false);
-}
-
-//a shorter variant
-if (((intOne >= 50) && (intOne <= 100)) || ((intTwo >= 50) && (intTwo <= 100)) || ((intThree >= 50) && (intThree <= 100))) {
+if (((intOne >= 50) && (intOne <= 99)) || ((intTwo >= 50) && (intTwo <= 99)) || ((intThree >= 50) && (intThree <= 99))) {
     console.log(`true, one or more variables are in the range 50 to 99`);
 } else {
     console.log(false);
@@ -33,7 +21,7 @@ if (((intOne >= 50) && (intOne <= 100)) || ((intTwo >= 50) && (intTwo <= 100)) |
 
 //3
 let a = 3;
-let b = 7;
+let b = 17;
 let c = 25;
 
 if ((a > b) && (a > c)) {
@@ -45,7 +33,7 @@ if ((a > b) && (a > c)) {
 }
 
 //4
-let newString = "thon";
+let newString = "python";
 
 if ((newString.substring(0, 2)) === "py") {
     console.log(newString);
@@ -90,10 +78,44 @@ let numberModTwo = 21;
 
 if ((numberMod % 7 === 0) || (numberMod % 11 === 0)) {
     console.log(true);
-} else if ((numberModTwo % 7 === 0) || (numberModTow % 11 === 0)) {
+} else if ((numberModTwo % 7 === 0) || (numberModTwo % 11 === 0)) {
     console.log(true);
 } else {
     console.log(false);
 }
 
 //9
+let numberNine = 3;
+let NumberNineTwo = 3;
+let sum = numberNine + NumberNineTwo;
+
+if (numberNine === NumberNineTwo) {
+    console.log(Math.pow(sum, 3));
+} else {
+    console.log(`numbers are not the same`);
+}
+
+//10
+let numberTen = 30;
+let numberTenTwo = 19;
+let differ = numberTen - numberTenTwo;
+
+if (numberTen > 19) {
+    console.log(Math.pow(differ, 2));
+} else {
+    console.log(`specified number is less than 19`);
+}
+
+//11
+let firstName = "Maria";
+let age = 25;
+
+if (age < 13) {
+    console.log(`${firstName} is a child`);
+} else if ((age >= 13) && (age < 20)) {
+    console.log(`${firstName} is a teenager`);
+} else if ((age >= 20) && (age < 30)) {
+    console.log(`${firstName} is a young adult`);
+} else {
+    console.log(`${firstName} is an adult`);
+}
