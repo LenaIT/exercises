@@ -9,6 +9,7 @@ let johnWeight = 98;
 
 //2
 let markBMI = markWeight / Math.pow(markHeight, 2); //31, 14
+// let markBMI = markWeight / (markHeight ** 2); //31, 14
 let johnBMI = johnWeight / Math.pow(johnHeight, 2); //28, 63
 
 console.log(markBMI.toFixed(2), johnBMI.toFixed(2));
@@ -16,6 +17,8 @@ console.log(markBMI.toFixed(2), johnBMI.toFixed(2));
 //3
 let isBiggerBMI = markBMI > johnBMI;
 console.log(isBiggerBMI);
+//console.log(isBiggerBMI = markBMI > johnBMI ? true : false);
+
 
 //4
 console.log(`Is Mark\'s BMI higher than John\'s? Why yes, it's ${isBiggerBMI}, it is`);
