@@ -29,3 +29,9 @@ if (markBMI > johnBMI) {
 } else {
     console.log(`John\'s BMI is ${johnBMI.toFixed(2)} and it is bigger than Mark\'s`);
 }
+
+/* if (isBiggerBMI) {
+    console.log("Mark");
+} else {
+    console.log("John");
+} */
