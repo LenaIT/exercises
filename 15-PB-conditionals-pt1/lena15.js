@@ -93,10 +93,10 @@ if (numberMod % 7 === 0 || numberMod % 11 === 0) {
 
 //9
 let numberNine = 3;
-let NumberNineTwo = 3;
-let sum = numberNine + NumberNineTwo;
+let numberNineTwo = 3;
+let sum = numberNine + numberNineTwo;
 
-if (numberNine === NumberNineTwo) {
+if (numberNine === numberNineTwo) {
     console.log(sum * 3);
 } else {
     console.log(`numbers are not the same`);
