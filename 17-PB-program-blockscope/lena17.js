@@ -2,24 +2,27 @@
 
 //1
 let determiner = 5;
+let x = null;
 if (determiner < 0) {
-    let x = -5;
-    console.log(`Value x is less than 0 and is ${x}`);
+    x = "Less than 0";
 } else {
-    let x = 15;
-    console.log(`Value x is greater or equal to 0 and is ${x}`);
+    x = "Greater or equal to 0";
 }
 
+//x = determiner < 0 ? "Less than 0" : "Greater or equal to 0";
+console.log(x);
+
 //2
-let updater = 8;
+let updater = null;
 if (determiner >= 0) {
-    updater = 12;
-    let message = 3;
-    console.log(`Positive Integer: ${message}`);
+    updater = "Greater or equal to 0";
+    let message = "Positive Integer";
+    console.log(message);
 } else {
-    updater = -12;
-    console.log(updater);
+    updater = "Less than 0";
 }
+console.log(updater);
+
 
 //What would happen if we tried to print "message" outside of the if statement? Comment your answer in the js file.
 // Will be an error (ReferenceError: message is not defined).Variable message is in block scope and we can use it only inside curly brackets, where it was declared
@@ -32,7 +35,7 @@ let age = 15;
 (age >= 18) ? console.log(`yes, you can drive a car`): console.log(`no, only bicycle`);
 
 
-let agePerson = 50n;
+let agePerson = 50;
 if (agePerson <= 10) {
     console.log(`drive a child bicycle`);
 } else if (10 < agePerson < 18) {
