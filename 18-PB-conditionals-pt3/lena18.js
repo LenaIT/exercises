@@ -39,3 +39,19 @@ if (averageA > averageL && averageA > averageM) {
 } else if (averageA === averageL === averageM) {
     console.log(`Teams finished three games with the same average score ${averageA}`);
 }
+
+//refactoring
+/* let aAverageScore = (89 + 120 + 103) / 3;
+let lAverageScore = (116 + 94 +123) / 3;
+let mAverageScore = (97 + 134 + 105) / 3;
+console.log(`Average score of Aleez\'s team is ${aAverageScore}; of Lis\'s team ${lAverageScore}  and for Mary\'s team ${mAverageScore}`);
+
+if (averageA > averageL && averageA > averageM) {
+    console.log(`Aleeza\'s team is a winner, their score in average is ${averageA}`);
+} else if (averageL > averageA && averageL > averageM) {
+    console.log(`Lis\'s team is a winner, their score in average is ${averageL}`);
+} else if (averageM > averageA && averageM > averageL) {
+    console.log(`Mary\'s team is a winner, their score in average is ${averageM}`);
+} else if (averageA === averageL === averageM) {
+    console.log(`Teams finished three games with the same average score ${averageA}`);
+} */
