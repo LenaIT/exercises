@@ -9,8 +9,8 @@ let scoreTwoL = 94
 let scoreThreeL = 123;
 
 //a
-let averageA = (scoreOneA + scoreTwoA + scoreTwoA) / 3;
-let averageL = (scoreOneL + scoreTwoL + scoreTwoL) / 3;
+let averageA = (scoreOneA + scoreTwoA + scoreThreeA) / 3;
+let averageL = (scoreOneL + scoreTwoL + scoreThreeL) / 3;
 console.log(`The average score for Aleeza\'s team is ${averageA}; for Lis\'s team is ${averageL}`);
 
 //b, c
@@ -18,7 +18,7 @@ if (averageA > averageL) {
     console.log(`Aleeza\'s team is a winner, their score in average is ${averageA}`);
 } else if (averageA < averageL) {
     console.log(`Lis\'s team is a winner, their score in average is ${averageL}`);
-} else if (averageA === averageL) {
+} else {
     console.log(`Teams finished three games with the same average score ${averageA}`);
 }
 
@@ -27,7 +27,7 @@ let scoreOneM = 97;
 let scoreTwoM = 134;
 let scoreThreeM = 105;
 
-let averageM = (scoreOneM + scoreTwoM + scoreTwoM) / 3;
+let averageM = (scoreOneM + scoreTwoM + scoreThreeM) / 3;
 console.log(`The average score for Mary\'s team is ${averageM}`);
 
 if (averageA > averageL && averageA > averageM) {
@@ -36,12 +36,14 @@ if (averageA > averageL && averageA > averageM) {
     console.log(`Lis\'s team is a winner, their score in average is ${averageL}`);
 } else if (averageM > averageA && averageM > averageL) {
     console.log(`Mary\'s team is a winner, their score in average is ${averageM}`);
-} else if (averageA === averageL === averageM) {
+} else {
     console.log(`Teams finished three games with the same average score ${averageA}`);
 }
 
+
+
 //refactoring
-/* let aAverageScore = (89 + 120 + 103) / 3;
+let aAverageScore = (89 + 120 + 103) / 3;
 let lAverageScore = (116 + 94 + 123) / 3;
 let mAverageScore = (97 + 134 + 105) / 3;
 console.log(`Average score of Aleez\'s team is ${aAverageScore}; of Lis\'s team ${lAverageScore}  and for Mary\'s team ${mAverageScore}`);
@@ -52,6 +54,6 @@ if (aAverageScore > lAverageScore && aAverageScore > mAverageScore) {
     console.log(`Lis\'s team is a winner, their score in average is ${lAverageScore}`);
 } else if (mAverageScore > aAverageScore && mAverageScore > lAverageScore) {
     console.log(`Mary\'s team is a winner, their score in average is ${mAverageScore}`);
-} else if (aAverageScore === lAverageScore === mAverageScore) {
+} else {
     console.log(`Teams finished three games with the same average score ${averageA}`);
-} */
+}
