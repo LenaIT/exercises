@@ -67,15 +67,15 @@ switch (fruit) {
 }
 
 //4 Percentage Complete. 
-let percentageComplete = 81;
+let percentageComplete = 100;
 
 if (percentageComplete < 30) {
     console.log('Still a long way to go');
-} else if (percentageComplete >= 30 && percentageComplete <= 50) {
+} else if (percentageComplete <= 50) {
     console.log('Slowly getting there');
-} else if (percentageComplete > 50 && percentageComplete <= 80) {
+} else if (percentageComplete <= 80) {
     console.log('You can do it!');
-} else if (percentageComplete > 80 && percentageComplete <= 99) {
+} else if (percentageComplete <= 99) {
     console.log('This is the last push!');
 } else if (percentageComplete === 100) {
     console.log('You\'re there. Well done!');
