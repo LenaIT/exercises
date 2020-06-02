@@ -41,6 +41,7 @@ switch (mark) {
         break;
     case 6:
         console.log(`Insufficient. You have shown insufficient knowledge to pass the exam you sat.`);
+        break;
     default:
         console.log(`Why were you not present on an exam?`);
 }
