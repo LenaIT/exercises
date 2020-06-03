@@ -50,7 +50,7 @@ for (let myInteg = 1; myInteg <= 100; myInteg++) {
 
 //6 Sum of Multiples 
 let sumTask6 = 0;
-for (let myNum = 1; myNum <= 1000; myNum++) {
+for (let myNum = 1; myNum < 1000; myNum++) {
     if (myNum % 3 === 0 || myNum % 5 === 0) {
         sumTask6 += myNum;
         //console.log(`$ {sumTask6}`);
