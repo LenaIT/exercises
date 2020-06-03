@@ -83,4 +83,10 @@ for (let c = 0; c <= 12;) {
     console.log(c);
 }
 
+//d   9 8 7 6 5 4 3 2 1 0
+for (let d = 9; d >= 0; d--) {
+    console.log(d);
+}
+
+//e 1 1 1 2 2 2 3 3 3 4 4 4
 
