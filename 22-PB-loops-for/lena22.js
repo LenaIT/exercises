@@ -9,10 +9,30 @@ for (let i = 0; i <= 20; i++) {
 console.log(`Sum of numbers from 1 to 20 is ${sum}`);
 
 //2 Bottles of beer on the wall
-let bottleNumber = 1;
-for (bottleNumber = 1; bottleNumber <= 5; bottleNumber++) {
-    console.log(`There is ${bottleNumber} bottle(s) of beer on the wall.`);
+for (let bottleNumber = 1; bottleNumber <= 5; bottleNumber++) {
+    let numbr;
+    switch (bottleNumber) {
+        case 1:
+            numbr = "one bottle";
+            break;
+        case 2:
+            numbr = "two bottles";
+            break;
+        case 3:
+            numbr = "three bottles";
+            break;
+        case 4:
+            numbr = "four bottles";
+            break;
+        case 5:
+            numbr = "five bottles";
+            break;
+        default:
+            console.log("Error");
+    }
+    console.log(`There is ${numbr} of beer on the wall.`);
 }
+
 
 //3 The odd/even reporter
 for (let myNumber = 0; myNumber <= 20; myNumber++) {
@@ -72,14 +92,12 @@ for (let a = 1; a <= 10; a++) {
 }
 
 //b   1 2 4 8 16 32 64 128
-for (let b = 1; b <= 64;) {
-    b *= 2;
+for (let b = 1; b <= 128; b *= 2) {
     console.log(b);
 }
 
 //c   3 6 9 12 15
-for (let c = 0; c <= 12;) {
-    c += 3;
+for (let c = 0; c <= 15; c += 3) {
     console.log(c);
 }
 
@@ -88,5 +106,43 @@ for (let d = 9; d >= 0; d--) {
     console.log(d);
 }
 
-//e 1 1 1 2 2 2 3 3 3 4 4 4
+//e  1 1 1 2 2 2 3 3 3 4 4 4
+let row = "";
+for (let e = 1; e <= 4; e++) {
+    for (let j = 1; j <= 3; j++) {
+        row += +e;
+    }
+}
+console.log(row);
 
+//f   0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+let line = "";
+for (let f = 0; f <= 4; f++) {
+    for (let j = 0; j <= 4; j++) {
+        line += +j;
+    }
+}
+console.log(line);
+
+//8 isPalindrome. 
+/* let inputString = "rentner";
+let reverseString = "";
+for (let i = inputString.length; i >= 1; i--) {
+    reverseString += inputString[i - 1];
+    console.log(reverseString);
+}
+console.log(
+    inputString === reverseString ?
+    `'${inputString}' is a palindrome. :)` :
+    `'${inputString}' is not a palindrome. :(`
+); */
+
+let inputString = "madam";
+let reverseString = "";
+for (let i = 1; i <= inputString.length; i++) {
+    reverseString += inputString[inputString.length - i];
+    console.log(reverseString);
+}
+console.log(
+    inputString === reverseString ? `'${inputString}' is a palindrome. :)` : `'${inputString}' is not a palindrome. :(`
+);
