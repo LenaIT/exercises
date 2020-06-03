@@ -15,16 +15,17 @@ for (bottleNumber = 1; bottleNumber <= 5; bottleNumber++) {
 }
 
 //3 The odd/even reporter
-for (let myNumber = 1; myNumber <= 20; myNumber++) {
+for (let myNumber = 0; myNumber <= 20; myNumber++) {
     if (myNumber % 2 === 0) {
         console.log(`${myNumber} is even`);
     } else {
         console.log(`${myNumber} is odd`);
     }
 }
+//console.log(myNumber % 2 === 0 ? console.log(`${myNumber} is even`) : console.log(`${myNumber} is odd`);
+
 
 //4 Multiplication Tables
-
 for (let myVar = 0; myVar <= 10; myVar++) {
     let mult = myVar * 9;
     console.log(`${myVar} * 9 = ${mult}`);
@@ -45,6 +46,8 @@ for (let myInteg = 1; myInteg <= 100; myInteg++) {
         console.log(`${myInteg}: 'Fizz'`);
     } else if (myInteg % 5 === 0) {
         console.log(`${myInteg}: 'Buzz'`);
+    } else {
+        console.log(myInteg);
     }
 }
 
@@ -67,4 +70,17 @@ for (let a = 1; a <= 10; a++) {
     let multA = a * 100;
     console.log(multA);
 }
+
+//b   1 2 4 8 16 32 64 128
+for (let b = 1; b <= 64;) {
+    b *= 2;
+    console.log(b);
+}
+
+//c   3 6 9 12 15
+for (let c = 0; c <= 12;) {
+    c += 3;
+    console.log(c);
+}
+
 
