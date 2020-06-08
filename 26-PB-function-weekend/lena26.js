@@ -13,3 +13,6 @@ checkWeekDay(currentDay);
 
 //2
 checkWeekDay(new Date('2020-06-14'));
+
+const myDay = new Date(2020, 5, 12 );
+console.log(`${myDay}`);
