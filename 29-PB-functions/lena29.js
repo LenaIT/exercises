@@ -76,11 +76,12 @@ const yourSupply = calcSupply(25, 3.75);
 console.log(yourSupply); */
 
 //9 Where's Waldo?
-const isWaldoInString = (yourString) => yourString.includes("Waldo");
+const isWaldoInString = (yourString) => yourString.toLowerCase().includes("waldo");
 
 const mySentence = isWaldoInString("is there wal here?");
 const mySentence2 = isWaldoInString("I found you Waldo!");
-console.log(mySentence, mySentence2);
+const mySentence3 = isWaldoInString("Is waldo here");
+console.log(mySentence, mySentence2, mySentence3);
 
 //10 Pie
 const isFairlyCutPie = (numberSlices, numberRecipients, proPerson) => (numberRecipients * proPerson <= numberSlices);
