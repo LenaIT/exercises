@@ -5,16 +5,18 @@
 function calculateExponent(number1, number2) {
     if (typeof number1 === "number" && typeof number2 === "number") {
         console.log("both numbers");
+        let line = ""; //to see numbers in one line
         for (let i = 1; i <= number2; i++) {
             let exp = number1 ** i;
-            console.log(exp);
+            line = line + ' ' + exp; //to see numbers in one line
         }
+        console.log(line);
     } else {
         console.log("Error");
     }
 }
 let a = 2;
-let b = 4;
+let b = 5;
 calculateExponent(a, b);
 
 // Fruits
