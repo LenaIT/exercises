@@ -50,4 +50,41 @@ const myStr = letterNumber("It is is a string", "a");
 console.log(myStr);
 
 
-//6
+//6  X To The Power of X
+const calculateBaseToExponent = (number, power) => number ** power;
+const myNumber = calculateBaseToExponent(5, 5);
+console.log(myNumber);
+
+//7 Dog Years
+const calculateDogAge = (yourDogAge) => yourDogAge * 7;
+
+const myDog = calculateDogAge(5);
+console.log(`Your dog is ${myDog} years old in human years!`);
+
+//8 A Lifetime Supply
+function calcSupply(age, amountPerDay) {
+    const maxAge = 100;
+    const amount = (maxAge - age) * 365 * Math.round(amountPerDay);
+    return amount;
+}
+const yourSupply = calcSupply(25, 3.75);
+console.log(`You will need ${yourSupply} of your favorite snack to last you til the age of 100`);
+
+/* shorter variant
+const calcSupply = (age, amountPerDay) => (100 - age) * 365 * Math.round(amountPerDay);
+const yourSupply = calcSupply(25, 3.75);
+console.log(yourSupply); */
+
+//9 Where's Waldo?
+const isWaldoInString = (yourString) => yourString.includes("Waldo");
+
+const mySentence = isWaldoInString("is there wal here?");
+const mySentence2 = isWaldoInString("I found you Waldo!");
+console.log(mySentence, mySentence2);
+
+//10 Pie
+const isFairlyCutPie = (numberSlices, numberRecipients, proPerson) => (numberRecipients * proPerson <= numberSlices);
+
+const myPie = isFairlyCutPie(8, 3, 2);
+const myPie2 = isFairlyCutPie(8, 3, 4);
+console.log(myPie, myPie2);
