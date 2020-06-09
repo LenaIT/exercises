@@ -16,5 +16,5 @@ function calculateDaysUntilEndOfMonth(yourDate) {
     let untilEndMonth = numberOfDays - yourDate.getDate();
     console.log(`Until the end of month ${yourDate.getMonth() + 2} is ${untilEndMonth} days`);
 }
-const myDate = new Date('2020-01-18');
+const myDate = new Date('2020-05-08');
 calculateDaysUntilEndOfMonth(myDate);
