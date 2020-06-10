@@ -48,6 +48,32 @@ console.log(output4, output4A, output4B, output4C);
 
 
 //5 Count Occurrences
+const countLetter = (string, letter) => {
+    let result = 0;
+    if (string.includes(letter)) {
+        for (let i = 0; i <= string.length; i++) {
+            if (string[i] === letter) {
+                result += 1;
+            };
+        }
+        return `Count ${result} x ${letter}`;
+    } else {
+        return `Your string does not contains ${letter}`;
+    }
+}
+
+let firstCheck = countLetter("this is a string", "i");
+console.log(firstCheck);
+
+
+//another variant
+/* /const countOccurrences = (string, letter) => {
+    const re = new RegExp(letter, "g");
+    const count = string.match(re) || [].length;
+    return count.length || 0;
+} */
+
+//Wrong understood the task. Here I am looking for position of a letter in a string
 /* function letterNumber(yourString, letter) {
     let letterPosition = "not in a string";
     for (let i = 0; i < yourString.length; i++) {
@@ -62,8 +88,6 @@ console.log(output4, output4A, output4B, output4C);
 const myStr = letterNumber("It is is a string", "i");
 console.log(myStr); */
 
-
-//5
 
 
 //6  X To The Power of X
@@ -121,3 +145,139 @@ const myPie2 = isFairlyCutPie(8, 3, 3);
 const myPie3 = isFairlyCutPie(24, 12, 2);
 
 console.log(myPie, myPie2, myPie3);
+
+
+/*11. XO Create a function that takes a string, checks if it has the same number of 'x's and 'o's and returns either true or false.
+Notes:
+Return a boolean value (true or false).
+The string can contain any character.
+When neither an x nor an o is in the string, return true.
+Examples:
+*/
+// 012345678910
+//"hello world" = lenght 11
+const xo = (myString) => {
+    let checkForX = 0; // "x"
+    let checkForO = 0; // "o"
+    let myNewString = myString.toLowerCase();
+    for (let position = 0; position < myNewString.length; position++) {
+        if (myNewString.charAt(position) === "x") {
+            checkForX++;
+        } else if (myNewString.charAt(position) === "o") {
+            checkForO++;
+        }
+    }
+    if (checkForO === checkForX) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(xo("ooxx")); // ➞ true
+console.log(xo("xooxx")); // ➞ false
+console.log(xo("ooxXm")); // ➞ true (case insensitive)
+console.log(xo("zpzpzpp")); // ➞ true (returns true if no x and o)
+console.log(xo("zzoo")); // ➞ false
+
+
+//another variant
+const checkXandO = (string) => {
+    let checkX = string.includes("x");
+    let checkO = string.includes("o");
+    let sumX = 0;
+    let sumO = 0;
+    if (checkX || checkO) {
+        for (let i = 0; i <= string.length; i++) {
+            if (string[i] === "x") {
+                sumX += 1;
+                /*  console.log(`sumX: ${sumX}`); */
+            } else if (string[i] === "o") {
+                sumO += 1;
+                /*  console.log(`sumO: ${sumO}`); */
+            }
+        }
+    }
+    /*  console.log(`sumX: ${sumX}, sumO: ${sumO}`); */
+    if (sumX === sumO) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//12 isPrime?
+
+const isPrime = number => {
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return number > 1;
+}
+const primeResult1 = isPrime(7);
+console.log(primeResult1);
+const primeResult2 = isPrime(9);
+console.log(primeResult2);
+const primeResult3 = isPrime(10);
+console.log(primeResult3);
+
+//13
+const validate = address => {
+    let atPosition;
+    let dotPosition;
+    if (address[0] !== '@') {
+        for (let i = 0; i < address.length; i++) {
+            if (address[i] === "@") {
+                atPosition = i;
+            }
+        }
+        for (let i = atPosition; i < address.length; i++) {
+            if (address[i] === ".") {
+                dotPosition = i;
+            }
+        }
+        if (atPosition < dotPosition) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+const emailResult1 = validate("john@example.com");
+console.log(emailResult1);
+const emailResult2 = validate("@example.com");
+console.log(emailResult2);
+const emailResult3 = validate("john.smith@com");
+console.log(emailResult3);
+const emailResult4 = validate("john.smith@email.com");
+console.log(emailResult4);
+const emailResult5 = validate("johnsmithemail.com");
+console.log(emailResult5);
+const emailResult6 = validate("johnsmith@emailcom");
+console.log(emailResult6);
+const emailResult7 = validate("johnsmithemailcom");
+console.log(emailResult7);
+
+//13
+const validateEMail = (string) => {
+    let isAsRequired = true;
+    let countAt = 0;
+    let atPos = 0;
+    let dotPos = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === "@") {
+            countAt++;
+            atPos = i;
+        }
+        if (string[i] === ".") {
+            dotPos = i;
+        }
+    }
+    if (string[0] === "@" || countAt !== 1 || atPos > dotPos) {
+        isAsRequired = false;
+    }
+    return `"${string}" is ${isAsRequired ? "valid" : "invalid"}.`;
+};
