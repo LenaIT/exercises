@@ -281,3 +281,23 @@ const validateEMail = (string) => {
     }
     return `"${string}" is ${isAsRequired ? "valid" : "invalid"}.`;
 };
+
+
+/* Пара строк образует странную пару, если выполняются оба следующих условия:
+
+Первая буква первой строки = последняя буква второй строки.
+Последняя буква первой строки = первая буква второй строки.
+Создайте функцию, которая возвращает true, если пара строк составляет странную пару, и false в противном случае.
+ */
+function isStrangePair(str1, str2) {
+    if (str1[0] === str2[str2.length - 1] && str1[str1.length - 1] === str2[0]) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+console.log(isStrangePair("sparkling", "groups")); //true
+console.log(isStrangePair("bush", "hubris")); //false
+console.log(isStrangePair("", "")); //false
