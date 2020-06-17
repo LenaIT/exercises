@@ -77,3 +77,13 @@ const arrInStr = worldCities.join(" + ");
 
 console.log("13:", arrInStr);
 console.log(typeof (arrInStr));
+
+//Bonus Write a program to reverse the string: "Hello World"
+
+const myStr = "Hello World";
+const strInArray = myStr.split(" ");
+console.log(strInArray);
+const arrReverse = strInArray.reverse();
+console.log(arrReverse, typeof (arrReverse));
+const strReverse = strInArray.join(" ");
+console.log(strReverse, typeof (strReverse));
