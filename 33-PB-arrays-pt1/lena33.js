@@ -71,4 +71,9 @@ worldCities.splice(1, 0, "Washington");
 console.log("12:", worldCities);
 
 //13. Bonus Write a program to join all elements of the result (worldCities) into a string. Example: worldCities = ["Berlin", "London", "Bangkok", "Phnom Penh"]; Expected Outputs: "Berlin , London, Bangkok, Phnom Penh" "Berlin+London+Bangkok+Phnom Penh"
+/* join(devider=glue) -creat a string from arr elements */
 
+const arrInStr = worldCities.join(" + ");
+
+console.log("13:", arrInStr);
+console.log(typeof (arrInStr));
