@@ -78,6 +78,7 @@ const arrInStr = worldCities.join(" + ");
 console.log("13:", arrInStr);
 console.log(typeof (arrInStr));
 
+
 //Bonus Write a program to reverse the string: "Hello World"
 
 const myStr = "Hello World";
@@ -87,3 +88,41 @@ const arrReverse = strInArray.reverse();
 console.log(arrReverse, typeof (arrReverse));
 const strReverse = strInArray.join(" ");
 console.log(strReverse, typeof (strReverse));
+
+
+// Extra Practice
+
+//Make an array of your siblings' names or your favorite movie characters' names.
+const movieCharacters = ["Sheldon Cooper", "Penny", "Leonard Hofstadter", "Howard Wolowitz", "Rajesh Koothrappali", "Bernadette Rostenkowski", "Amy Farrah Fowler"];
+console.log(movieCharacters);
+
+//Make an array of your parents' names.
+const parents = ["Mama", "Papa"];
+console.log(parents);
+
+//Combine these two arrays.
+const mix = movieCharacters.concat(parents);
+console.log(mix);
+
+//Add your pets' names.
+mix.push("cat Chesmo", "dog Goldie");
+console.log(mix);
+
+//Reverse the order of the array.
+mix.reverse();
+console.log(mix);
+
+//Access one of your parents' names.
+
+console.log(mix.indexOf("Mama")); //3
+const mama = mix[3];
+console.log(mama);
+
+//Update the name of one of your parents.
+//to update in array
+mix[3] = "Mama's Name";
+console.log(mix);
+
+//to update variable 
+const mama1 = mix[3];
+console.log(mama1);
