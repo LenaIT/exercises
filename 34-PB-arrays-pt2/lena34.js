@@ -51,15 +51,16 @@ console.log("3: ", reverse("34532"));
 /* 4. AEIOU: Vowels.Create a function that takes a string in its parameters and counts the number of vowels(i.e.in English, "a, e, i, o, u") in the string. */
 
 function findVowels(str) {
+    str.toLowerCase();
     const inArr = str.split('');
-    const vowels = inArr.filter(item => item === "a" || item === "e" || item === "i" || item === "a" || item === "o" || item === "u");
+    const vowels = inArr.filter(item => item === "a" || item === "e" || item === "i" || item === "o" || item === "u");
     return vowels.length;
 }
 console.log("4: ", findVowels("this is a string")); //4
 
 //with match
 function vowels(str) {
-    const newArray = str.match(/[aeiouAEIOU]/g);
+    const newArray = str.match(/[aeiou]/gi); //  g search globally ; gi - globally and case insensitive
     //console.log(newArray);
     return newArray === null ? 0 : newArray.length;
 }
@@ -121,10 +122,12 @@ If there are no even numbers, return an empty array. Do not include 0. */
 
 function evenNums(number) {
     const result = [];
-    for (let i = 1; i <= number; i++) {
-        if (i % 2 === 0) {
+    for (let i = 2; i <= number; i += 2) { // 1 is odd, we can save one iteration
+        /* if (i % 2 === 0) {
             result.push(i);
-        }
+            //console.log(result);
+        } */
+        result.push(i);
     }
     return result;
 }
@@ -135,9 +138,11 @@ console.log("8: ", evenNums(2)); // [2]
 
 /* Bonus Alphabetical Order. Create a function to sort a string into alphabetical order. NB: assume numbers, symbols and punctuation are not included in the string.*/
 function alphaOrder(str) {
-    const strInArr = str.split(''); // to make array from str
-    const arrLetters = strInArr.sort();
-    const line = arrLetters.join(""); // to make atr from array
-    return line;
+    /* const strInArr = str.split(""); // to make array from str
+    const arrLetters = strInArr.sort(); // to sort al
+    const line = arrLetters.join(""); // to make str from array
+    return line; */
+
+    return str.split("").sort().join("");
 }
 console.log("Bonus: ", alphaOrder("webdev")); // "bdeevw"

@@ -116,7 +116,7 @@ console.log("5: ", wordRank("Today is Wednesday.")); // "Wednesday"
 
 
 // one more variant
-function wordRank(str) {
+/* function wordRank(str) {
     const LETTERS = ['.', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     const STR_IN_ARR = str.split(' '); //separate words
     console.log(STR_IN_ARR);
@@ -152,7 +152,7 @@ function wordRank(str) {
 console.log("5: ", wordRank("The quick brown fox.")); //"brown"
 console.log("5: ", wordRank("Nancy is very pretty.")); // "pretty"
 console.log("5: ", wordRank("Check back tomorrow, man!")); //"tomorrow"
-console.log("5: ", wordRank("Today is Wednesday.")); // "Wednesday"
+console.log("5: ", wordRank("Today is Wednesday.")); // "Wednesday" */
 
 
 
@@ -187,3 +187,43 @@ function hackerSpeak(str) {
 console.log("6: ", hackerSpeak("javascript is cool")); //"j4v45cr1pt 15 c00l"
 console.log("6: ", hackerSpeak("programming is fun")); //"pr0gr4mm1ng 15 fun"
 console.log("6: ", hackerSpeak("become a coder")); //"b3c0m3 4 c0d3r" 
+
+
+// Bonus Questions
+
+/* 1. Is it Symmetrical? Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. NB: A number is symmetrical when it is the same as its reverse.
+
+isSymmetrical(7227) ➞ true
+isSymmetrical(12567) ➞ false
+isSymmetrical(44444444) ➞ true
+isSymmetrical(9939) ➞ false
+isSymmetrical(1112111) ➞ true */
+
+function isSymmetrical(str) {
+    const MY_ARR = [...arguments]; //array with one number
+    console.log(MY_ARR);
+    const ARR_IN_STR = MY_ARR.join(''); //array in str
+    console.log(ARR_IN_STR);
+    const SEPARATE_NUM_ARR = ARR_IN_STR.split(''); //arr with separate numbers
+    console.log(SEPARATE_NUM_ARR);
+
+    for (let i = 0; i < SEPARATE_NUM_ARR.length; i++) {
+        // Check the element to the element in the same place counting from the back
+        if (SEPARATE_NUM_ARR[i] !== SEPARATE_NUM_ARR[SEPARATE_NUM_ARR.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+console.log("Bonus 1: ", isSymmetrical(7227));
+console.log("Bonus 1: ", isSymmetrical(12567)); ///f
+console.log("Bonus 1: ", isSymmetrical(44444444));
+console.log("Bonus 1: ", isSymmetrical(9939)); //f
+console.log("Bonus 1: ", isSymmetrical(1112111));
+
+
+/* 2. snake_case ➞ camelCase Create a function toCamelCase() that takes a single string in snake_case and converts it into camelCase.
+toCamelCase("hello_world") ➞ "helloWorld"
+toCamelCase("javascript_is_fun") ➞ "javaScriptIsFun" */
