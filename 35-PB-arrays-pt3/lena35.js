@@ -16,15 +16,12 @@ console.log("1: ", isFourLetters(["Tomato", "Corn", "Lettuce"])); //["Corn"]
 console.log("1: ", isFourLetters(["Dog", "Cat", "Deer"])); //["Deer"]
 
 
+
 // 2. Months. Create a function that takes a number (from 1 to 12) and return its corresponding month name as a string.
 
 function monthName(number) {
     const MONTH = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    for (let i = 0; i <= number; i++) {
-        if (MONTH.indexOf(MONTH[i]) === number - 1) {
-            return MONTH[i];
-        }
-    }
+    return MONTH[number - 1];
 }
 console.log("2: ", monthName(3)); //March
 console.log("2: ", monthName(12)); //December
@@ -44,7 +41,8 @@ function amplify(number) {
     for (let i = 1; i <= number; i++) {
         ARR_NUMBERS.push(i);
     }
-    for (let i = 0; i < ARR_NUMBERS.length; i++) {
+    console.log(ARR_NUMBERS);
+    for (let i = 3; i < ARR_NUMBERS.length; i++) { // first % 4 is 4 (skip 1, 2, 3) 
         if (ARR_NUMBERS[i] % 4 === 0) {
             ARR_NUMBERS[i] = ARR_NUMBERS[i] * 10;
         }
@@ -52,9 +50,34 @@ function amplify(number) {
     return ARR_NUMBERS;
 }
 
-console.log("3: ", amplify(4)); // [1, 2, 3, 40]
-console.log("3: ", amplify(5)); // [1, 2, 3]
-console.log("3: ", amplify(25)); // [1, 2, 3, 40, 5, 6, 7, 80, 9, 10, 11, 120, 13, 14, 15, 160, 17, 18, 19, 200, 21, 22, 23, 240, 25]
+// second variant with one for 
+function amplify2(number) {
+    const ARR_NUMBERS = [];
+    for (let i = 1; i <= number; i++) {
+        if (i % 4 === 0) {
+            ARR_NUMBERS.push(i * 10);
+        } else {
+            ARR_NUMBERS.push(i);
+        }
+    }
+    return ARR_NUMBERS;
+}
+
+
+console.log("3: ", amplify2(4)); // [1, 2, 3, 40]
+console.log("3: ", amplify2(3)); // [1, 2, 3]
+console.log("3: ", amplify2(25)); // [1, 2, 3, 40, 5, 6, 7, 80, 9, 10, 11, 120, 13, 14, 15, 160, 17, 18, 19, 200, 21, 22, 23, 240, 25]
+
+//with map
+const isFourMap = (num) => {
+    let array1 = [];
+    for (let i = 1; i <= num; i++) {
+        array1.push(i);
+    }
+    const map1 = array1.map((x) => (x % 4 === 0 ? x * 10 : x));
+    return map1;
+};
+console.log(isFourMap(6));
 
 
 //4. One is not like the others... Create a function that takes an array of numbers and return the number that's unique.
@@ -74,6 +97,21 @@ console.log("4: ", unique([1, 1, 1, 1, 1, 1, 8])); //8
 
 
 
+//from Martina
+/* function unique(array) {
+    let number;
+    for (let i = 1; i < array.length; i++) {
+        if (array[i-1] !== array[i]) { // no doublette
+            number = array[i-1];
+        }
+    }
+    return number;
+}
+console.log(unique([3, 3, 3, 7, 3, 3])); // ➞ 7
+console.log(unique([0, 0, 0.77, 0, 0])); // ➞ 0.77
+console.log(unique([0, 1, 1, 1, 1, 1, 1, 1])); // ➞ 0 */
+
+
 /* 5. Word Ranking. Create a function that takes a string of words and returns the highest scoring word. Each letter of a word scores points according to it's position in the alphabet: a = 1, b = 2, c = 3, etc.
 The returned string should only contain alphabetic characters (a-z).
 Preserve case in the returned string (see 4th example above).*/
@@ -82,6 +120,7 @@ function wordRank(str) {
     const LETTERS = ['.', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     const STR_IN_ARR = str.split(' '); //separate words
     console.log(STR_IN_ARR);
+
     const ARR_SUM = [];
 
     for (let i = 0; i < STR_IN_ARR.length; i++) {
@@ -104,7 +143,6 @@ function wordRank(str) {
     }
     console.log(`Largest sum ${largest}, index of largest is ${ARR_SUM.indexOf(largest)}`);
     let index = ARR_SUM.indexOf(largest); //index of the largest sum in arr
-    console.log(index);
 
     return STR_IN_ARR[index];
 }
@@ -224,6 +262,20 @@ console.log("Bonus 1: ", isSymmetrical(9939)); //f
 console.log("Bonus 1: ", isSymmetrical(1112111));
 
 
-/* 2. snake_case ➞ camelCase Create a function toCamelCase() that takes a single string in snake_case and converts it into camelCase.
-toCamelCase("hello_world") ➞ "helloWorld"
-toCamelCase("javascript_is_fun") ➞ "javaScriptIsFun" */
+/* 2. snake_case ➞ camelCase Create a function toCamelCase() that takes a single string in snake_case and converts it into camelCase.*/
+
+function toCamelCase(str) {
+    const MY_ARR = str.split("");
+    console.log(MY_ARR);
+    for (let i = 0; i < MY_ARR.length; i++) {
+        if (MY_ARR[i] === "_") {
+            MY_ARR[i] = MY_ARR[i + 1].toUpperCase();
+        }
+    }
+    console.log(MY_ARR);
+    const RESULT = MY_ARR.join('');
+    return RESULT;
+}
+
+console.log("Bonus 2: ", toCamelCase("hello_world")); //"helloWorld"
+console.log("Bonus 2: ", toCamelCase("javaScriptIsFun")); //"javaScriptIsFun"
