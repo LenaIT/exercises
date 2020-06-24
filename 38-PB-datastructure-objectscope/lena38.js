@@ -10,6 +10,10 @@ const student = {
 };
 student.myFunction();
 
+/* const myFunction = student.myFunction.bind(student); // to save in a variable , to use globally
+student.myFunction(); */
+
+
 //console.log(`1: ${student.firstName} ${student.lastName} is a student in ${student.class}`);
 
 //2 Create a person object. Include the person's first and last name, age, job, city etc. Create a method to print data from the object e.g. "John Smith is a 41 year old engineer living in France".
@@ -26,6 +30,9 @@ const person = {
     }
 };
 person.myFunction();
+
+/* const myFunction = person.myFunction.bind(person); // to save in a variable , to use globally
+person.myFunction(); */
 
 //console.log(`2: ${person.firstName} ${person.lastName} is a ${person.age} year old ${person.job} living in ${person.city} in ${person.country}.`);
 
