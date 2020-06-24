@@ -37,6 +37,47 @@ function draw(star) {
 }
 draw("*");
 
+//from Andrea
+const halfTree = (character, lines) => {
+    let array = [];
+    for (let i = 0; i < lines; i++) {
+        for (let j = 0; j < i; j++) {
+            array.push(character);
+            console.log(array.join(" "));
+        }
+    }
+}
+console.log("Task 1: Tree");
+halfTree("*", 4);
+
+// build a half pyramid with return
+const halfPyramid = (lines) => {
+    let array = [];
+    for (let i = 0; i < lines; i++) {
+        for (let j = 0; j <= i; j++) {
+            array.push("*"); // the amount of stars per line
+            console.log(array);
+        }
+        array.push("\n"); // insert a new line break special character
+    }
+    return " " + array.join(" ");
+}
+console.log("Task 1: Pyramid");
+console.log(halfPyramid(4));
+
+// mohameds number pyramid
+function mohamedsPyramid(lines) {
+    let string = '';
+    for (let i = 0; i < lines; i++) { // forwards
+        for (let j = i; j >= 0; j--) { // backwards accordingly to i
+            string += j + " ";
+        }
+        string += "\n"; // new line break
+        //console.log(string);
+    }
+    return string;
+}
+console.log(mohamedsPyramid(10));
 
 //2
 let arr2 = [
@@ -50,7 +91,7 @@ let arr2 = [
 for (let i = 0; i < arr2.length; i++) {
     console.log(`row ${i}`);
     for (let j = 0; j < arr2[i].length; j++) {
-        console.log(arr2[i][j]);
+        console.log(" " + arr2[i][j]);
     }
 }
 
@@ -96,3 +137,38 @@ function lines(arr) {
     console.log(line2);
 }
 lines([0, 1, 2, 3, 4]);
+
+//from Martina
+arr = [];
+for (let i = 1; i <= 4; i++) {
+    for (let y = 1; y <= 3; y++) {
+        let strNums = i.toString();
+        arr.push(strNums);
+    }
+}
+console.log(arr.join(" "));
+arr = [];
+for (let i = 0; i <= 5; i++) {
+    for (let y = 0; y <= 4; y++) {
+        strNums = y.toString();
+        arr.push(strNums);
+    }
+}
+console.log(arr.join(" "));
+
+//Vincenzo
+const printNumbers = () => {
+    let arrayOne = [];
+    let arrayTwo = [];
+    for (let i = 1; i <= 4; i++) {
+        for (let j = 0; j <= 4; j++) {
+            if (j !== 0 && j !== 4) {
+                arrayOne.push(i);
+            }
+            arrayTwo.push(j);
+        }
+    }
+    console.log(arrayOne.join(" "));
+    console.log(arrayTwo.join(" "));
+}
+printNumbers();
