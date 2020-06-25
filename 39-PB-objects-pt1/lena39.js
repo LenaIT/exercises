@@ -8,7 +8,7 @@ const person = {
     city: "Hamburg",
     profession: "doctor",
     pets: true
-}
+};
 
 console.log("Task 1:");
 //first variant for ..in
@@ -30,7 +30,7 @@ const drinks = {
     choice3: "milk",
     choice4: "juice",
     choice5: "water"
-}
+};
 
 function getObjectValues(obj) {
     console.log(Object.values(obj));
@@ -45,12 +45,16 @@ const anotherPerson = {
     lastName: "Smith",
     job: "driver",
     age: 20,
-    city: "Paris",
-    myFunction: function () {
-        console.log(`${this.firstName} ${this.lastName} is a ${this.age} years old ${this.job} in ${this.city}.`);
-    }
+    city: "Paris"
+
 };
+
 console.log("\nTask 3:");
+//to push or overwrite a value : key in object:  <obj>.<key> = <value>;
+anotherPerson.myFunction = function () {
+    console.log(`${this.firstName} ${this.lastName} is a ${this.age} years old ${this.job} in ${this.city}.`);
+}
+
 anotherPerson.myFunction();
 
 //Bonus
@@ -61,20 +65,38 @@ const pets = {
     cats: 1,
     dogs: 2,
     turtles: 4
-}
+};
 
 function objectToArray(obj) {
     console.log(Object.entries(obj));
 }
 objectToArray(pets);
 
+//another variant
+function convertToArray(obj) {
+    const result = [];
+    //for (let i = 0; i < Object.length; i++ ){
+    for (const item in obj) {
+        let newArr = [];
+        newArr.push(item);
+        newArr.push(obj[item]);
+        result.push(newArr);
+    }
+    return result;
+}
+const objectToArray = {
+    A: 1,
+    B: 2,
+    C: 3
+}
+console.log(convertToArray(objectToArray));
 
 //2 Create a function that returns an array of **properties** of a javascript object. 
 const student = {
     name: "Mike",
     class: "4A",
     course: "English"
-}
+};
 
 function arrOfProperties(obj) {
     console.log(Object.keys(obj));
@@ -115,7 +137,7 @@ mergeTwoObj(first, last);
 const user = {
     name: "John",
     job: "teacher"
-}
+};
 
 function objectFlip(obj) {
     const ret = {};
