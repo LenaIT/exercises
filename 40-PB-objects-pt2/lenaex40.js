@@ -183,7 +183,7 @@ console.log(programming);
 //Bonus
 //The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.
 
-const object1 = {
+/* const object1 = {
     property1: 42
 };
 
@@ -192,5 +192,6 @@ Object.seal(object1);
 object1.property2 = 33;
 console.log(object1.property2); //undefined
 
+
 delete object1.property1; // cannot delete when sealed
-console.log(object1.property1); // 42
+console.log(object1.property1); // 42 */
