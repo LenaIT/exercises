@@ -56,7 +56,7 @@ function findSmallest(arr) {
 
 console.log("\nTask 4: ", findSmallest(myNumbers));
 
-//5 5. Clone and Merge
+//5. Clone and Merge
 //5.1 Clone the person object.
 const person = {
     name: "John"
@@ -81,4 +81,22 @@ employee["name"] = "Alex";
 employee["role"] = "Doctor";
 console.log(employee);
 
+
 //Bonus: 6. Is the average a whole number?
+/* Create a function that takes 4 integers as parameters and returns true or false depending on whether the average of all the arguments is a whole number or not.
+
+Once you have created a function, pass in an array as an argument which contains four elements - check if this method still outputs the correct result! */
+
+function isWhole(number1, number2, number3, number4) {
+    let sum = number1 + number2 + number3 + number4;
+    let average = sum / 4;
+    return Number.isInteger(average);
+}
+
+
+console.log("\nTask 6: ", isWhole(1, 2, 3, 4)); // ➞ false
+console.log(isWhole(9, 2, 2, 5)); //false
+console.log(isWhole(5, 5, 5, 5)); //true
+//with array
+console.log(isWhole(...[2, 2, 2, 2])); //true
+console.log(isWhole(...[2, 2, 2, 5])); //false
