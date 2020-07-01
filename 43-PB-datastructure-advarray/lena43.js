@@ -51,6 +51,17 @@ console.log([1, 2, 3, 11, 12, 13].filter(filterEvens)); //returns [2,12]
 console.log([22, 2, 31, 110, 6, 13].filter(filterEvens)); // [22,2,110,6]
 
 
+//from Marcel
+const filterEvens2 = arr => arr.filter(value => value % 2 === 0);
+console.log(filterEvens2([1, 2, 3, 11, 12, 13])); //returns [2,12]
+console.log(filterEvens2([22, 2, 31, 110, 6, 13])); // [22,2,110,6]
+
+
+
+
+
+
+
 /* const filterEvens = (arr) => arr.filter(function (value) {
     return value % 2 === 0;
 }); */
