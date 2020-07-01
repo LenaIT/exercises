@@ -65,6 +65,10 @@ console.log([22, 2, 31, 110, 6, 13].filter(filterEvens)); // [22,2,110,6]
 //4 Given an array, create a function which filters array based on a search query.
 
 const friends = ["rika", "jenna", "bleda", "oliver", "itamar"];
+const betterFriends = friends.map(function (value) {
+    return value.charAt(0).toUpperCase() + value.substring(1).toLowerCase();
+});
+console.log(betterFriends);
 
 const filterItems = (arr, search) => arr.filter(function (value) {
     let result = value.includes(search);
@@ -72,8 +76,8 @@ const filterItems = (arr, search) => arr.filter(function (value) {
 });
 
 console.log("\nTask 4: ");
-console.log(filterItems(friends, 'ka')); // ["Rika"];
-console.log(filterItems(friends, 'e')); // ["Jenna", "Bleda", "Oliver"];
+console.log(filterItems(betterFriends, 'ka')); // ["Rika"];
+console.log(filterItems(betterFriends, 'e')); // ["Jenna", "Bleda", "Oliver"];
 
 
 //5 Write a function called sum that uses the reduce method to sum up an array of numbers
