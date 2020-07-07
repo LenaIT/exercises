@@ -16,15 +16,17 @@ for (let i = 0; i < board.length; i++) {
 //2.1 Create a doggo object. Add name and breed as properties of the object.
 const doggo = {
     name: "Pluto",
-    breed: "Husky"
-};
+    breed: "Husky",
+}
 
 //2.2 Create an array within the doggo object named favorite foods and add the doggo's favorite foods to the array.
 console.log("\n Task 2:");
-doggo.favoriteFood = [];
-doggo.favoriteFood[0] = "meat";
+//doggo.favoriteFood = [];
+doggo.favoriteFood = ["meat", "bones", "bacon"];
+
+/* doggo.favoriteFood[0] = "meat";
 doggo.favoriteFood[1] = "bones";
-doggo.favoriteFood[2] = "bacon";
+doggo.favoriteFood[2] = "bacon"; */
 
 console.log(doggo);
 console.log(doggo.favoriteFood);
