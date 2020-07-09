@@ -7,6 +7,7 @@ class Dog {
         this.bark = function () {
             console.log(`${this.name} says woof`);
         }
+        //bark() {}
     }
 }
 
@@ -64,7 +65,7 @@ Fix the code (or restart) to solve the problem.
 */
 
 function compareArrays(arr1, arr2) {
-    if (arr1.join('|') === arr2.join('|')) {
+    if (arr1.join() === arr2.join()) {
         return true;
     } else {
         return false;
@@ -84,9 +85,22 @@ function sum(array) {
     if (array.length === 0) { // base case 
         return 0;
     } else {
-        return array[0] + sum(array.slice(1));
+        //return array[0] + sum(array.slice(1)); //adding the first element to the sum of the remainder of the array
+        let result = array.pop() + sum(array);
+        return result;
     }
 }
-
 console.log("\nTask 5:");
 console.log(sum([1, 2, 3])); //6
+console.log(sum([]));
+console.log(sum([0, 25, -8]));
+
+
+
+
+
+
+/* 1 + sum([2,3])
+    1 + 2 + sum([3])
+        1 + 2 + 3 + sum([])
+            1 + 2 + 3 + 0  -> 6  */
