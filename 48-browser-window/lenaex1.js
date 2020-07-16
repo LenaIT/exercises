@@ -12,7 +12,7 @@ for (let i = 1; i <= 3; i++) {
             alert("Nope, sorry! Try again!");
         }
     } else {
-        alert("Error!Nimber should be between 1 and 10!");
+        alert("Error!Number should be between 1 and 10!");
     }
 }
 
