@@ -1,0 +1,26 @@
+form {
+    font-size: 24px;
+}
+#password {
+    width: 95%;
+    font-size: 2em;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+#number_characters {
+    width: 45%;
+    padding: 10px;
+    margin: 3% 3% 3% auto;
+    font-size: 20px;
+}
+
+.form_btn {
+    display: block;
+    width: 97%;
+    font-size: 2em;
+    padding: 10px;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 15px;
+}
